@@ -1,159 +1,166 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'base.html' %}
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+{% load static %}
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+{% block content %}
+<h1 class="text-center">
+  RFM analysis for customer segmentation
+</h1>
 
-      <div class="container">
-            <h1><center>RFM analysis for customer segmentation</center></h1>
+<img src="{% static 'images\analysis.png' %}" alt="analysis" style="width:80%; margin-left: 15%; margin-bottom: 15px;">
 
-            <img src="C:\Users\admin\Downloads\rfm_user_interface-master\static\images\analysis.png" alt="analysis" style="width:80%; margin-left: 15%; margin-top: 45px;" >
-            
-            <p>There are many smart marketers who understands meaning of importance known by the customer.Rather than basically centering on creating more clicks,marketers must take after the worldview move from expanding CTR(Click-Through Rates) to maintenance,devotion and building client connections. </p>
-            
-            <p>Rather than analyzing the whole client base as a entire,it's way better to portion them into homogeneous bunches,get in the characterisctics of each gather, and lock in them with important campaigns instead of portioning on fair client age or topography.</p>
-            
-            <p>One of the foremost well known,easy to use and viable division strategies to empower marketers to analyze client behaviour is RFM investigation.</p> 
-      </div>
+<p>There are many smart marketers who understands meaning of importance known by the customer.Rather than
+  basically centering on creating more clicks,marketers must take after the worldview move from expanding
+  CTR(Click-Through Rates) to maintenance,devotion and building client connections. </p>
 
-      <div class="container-fluid">
-        
-        <h1 class="rfm"><center>What is RFM analysis?</center></h1>
-        
-        <p>RFM stands for Recency, Recurrence, and Money related esteem, each comparing to a few key client characteristic. These RFM measurements are vital pointers of a customer’s behavior since recurrence and financial esteem influences a customer’s lifetime esteem, and recency influences maintenance, a degree of engagement.</p>
-        
-        <img src="C:\Users\admin\Downloads\rfm_user_interface-master\static\images\metrics.png" align="centre" style="width:70%; margin-left: 17%; margin-top:45px;">
+<p>Rather than analyzing the whole client base as a entire,it's way better to portion them into homogeneous
+  bunches,get in the characterisctics of each gather, and lock in them with important campaigns instead of
+  portioning on fair client age or topography.</p>
 
-        <p>Businesses that need the money related viewpoint, like viewership, readership, or surfing-oriented items, might utilize Engagement parameters rather than Financial components. This comes about in utilizing RFE – a variety of RFM. Furthermore, this Engagement parameter might be characterized as a composite esteem based on measurements such as bounce rate, visit length, number of pages gone by, time went through per page, etc.</p>
-        <h3>RFM variables outline these actualities:</h3>
-          <ul>
-            <li>the more later the buy, the more responsive the client is to advancements</li>
-            <li>the more regularly the client buys, the more locked in and fulfilled they are</li>
-            <li>money related esteem separates overwhelming spenders from low-value buyers</li>
-          </ul>
+<p>One of the foremost well known,easy to use and viable division strategies to empower marketers to analyze
+  client behaviour is RFM investigation.</p>
 
-          <h1><center>How to Implement RFM Analysis Used in Customer Segmentation</center></h1>
-          <p>RFM investigation makes a difference marketers discover answers to the taking after questions:</p>
-            <ul>
-              <li>Who are your best customers?</li>
-              <li>Which of your clients may contribute to your churn rate?</li>
-              <li>Who has the potential to ended up important customers?</li>
-              <li>Which of your clients can be retained?</li>
-              <li>Which of your clients are most likely to reply to engagement campaigns?</li>
-            </ul>
-            <p>Let’s illustrate how RFM works by considering a test dataset of client transactions:</p>
 
-        <img src="C:\Users\admin\Downloads\rfm_user_interface-master\static\images\customer.png" style="width:60%; margin-left: 20%;">
-      </div>
 
-      <div class="analysis">
-        <h1><center>RFM Analysis Example</center></h1>
-          <p>To conduct RFM examination for this illustration, let’s see how we will score these clients by positioning them based on each RFM trait independently.</p>
 
-          <p>Accept that we rank these clients from 1-5 utilizing RFM values</p>
-          <p>Let’s start with positioning clients on recency to begin with, as appeared within the underneath table:</p>
-          <img src="C:\Users\admin\Downloads\rfm_user_interface-master\static\images\rank customer.png" style="width:55%; margin-left:20%;">
-          <p>As seen within the over table, we have sorted customers by recency, with the foremost later buyers at the best. Since clients are relegated scores from 1-5, the beat 20% of clients (client 12, 11, 1) get a recency score of 5, the another 20% (the another 3 clients 15, 2, 7) a score of 4, and so on.</p>
-          <p>So also, we are able at that point sort clients by recurrence from most to slightest visit, allotting the best 20% a recurrence score of 5, etc. For the money related calculate, the beat 20% of clients (enormous spenders) will be doled out a score of 5 and the least 20% a score of 1. These F and M scores are summarized underneath:</p>
-          <img src="C:\Users\admin\Downloads\rfm_user_interface-master\static\images\f_score.png" style="width:55%; margin-left:20%;">
-      </div>
+<h1 class="text-center">
+  What is RFM analysis?
+</h1>
 
-      <div class="score">
-        <h1><center>RFM Score</center></h1>
-        <p>At long last, we are able rank these clients by combining their person R, F, and M rankings to reach at an amassed RFM score. This RFM score, shown within the table underneath, is essentially the normal of the person R, F, and M scores, gotten by giving break even with weights to each RFM property.</p>
-        <img src="C:\Users\admin\Downloads\rfm_user_interface-master\static\images\score.png" style="width:55%; margin-left:20%;">
-      </div>
+<p>RFM stands for Recency, Recurrence, and Money related esteem, each comparing to a few key client
+  characteristic. These RFM measurements are vital pointers of a customer’s behavior since recurrence and
+  financial esteem influences a customer’s lifetime esteem, and recency influences maintenance, a degree of
+  engagement.</p>
 
-      <div class="rfm analysis">
-        <p>The following address that emerges is: Is it reasonable to normal out the person R, F, and M scores for each client and relegate them to RFM section, as per their buy or engagement behavior?</p>
-        <p>Depending on the nature of your businesses, you might increment or diminish the relative significance of each RFM variable to reach at the ultimate score. For case:</p>
-          <ul>
-            <li>In a buyer durables commerce, the money related esteem per exchange is regularly tall but recurrence and recency is flat. For illustration, you can’t anticipate a client to buy a fridge or discuss conditioner on a month to month premise. In this case, a advertiser may provide more weight to financial and recency angles instead of the recurrence viewpoint.</li>
-            <li>In a retail commerce offering fashion/cosmetics, a client who looks and buys items each month will have the next recency and recurrence score than money related score. Accordingly, the RFM score may be calculated by giving more weight to R and F scores than M.</li>
-            <li>For substance apps like Hotstar or Netflix, a fling watcher will have a longer session length than a standard buyer observing at standard interims. For bingers, engagement and recurrence may be given more significance than recency, and for mainstreamers, recency and frequency can be given higher weights than engagement to reach at the RFE score.</li>
-          </ul>
-          <p>This straightforward approach of scaling clients from 1-5 will result in, at the foremost, 125 distinctive RFM scores (5x5x5), extending from 111(lowest) to 555(highest). Each RFM cell will contrast in estimate and change from one another, in terms of the customer’s key propensities, captured within the RFM score. Clearly, marketers can’t analyze all 125 portions separately in the event that each RFM cell is considered a portion, and it’s troublesome and overpowering to imagine this fanciful 3D 3d shape!</p>
-      </div>
-      <div class="model">
-        <p>We utilize recency and recurrence scores to imagine RFM investigation on a 2-dimensional chart. This empowers clients to devour and make sense of the scores more effectively. Additionally, rather than making 25 segments, we have combined many portions to reach at more sensible and natural fragments.</p>
+<img src="{% static 'images/metrics.png' %}" align="centre" style="width:70%; margin-left: 17%; margin-top:45px;">
 
-        <img src="C:\Users\admin\Downloads\rfm_user_interface-master\static\images\model.png" style="width:55%; margin-left:20%;">
-        <p>As outlined within the above RFM framework, we will get the taking after data for each of the fragments:</p>
-          <ul>
-            <li>brief portrayal of the fragment</li>
-            <li>recency(last activity)</li>
-            <li>frequency(activity count)</li>
-            <li>average monetary value</li>
-            <li>attainable of clients over distinctive channels</li>
-          </ul>
-      </div>
+<p>Businesses that need the money related viewpoint, like viewership, readership, or surfing-oriented items,
+  might utilize Engagement parameters rather than Financial components. This comes about in utilizing RFE – a
+  variety of RFM. Furthermore, this Engagement parameter might be characterized as a composite esteem based on
+  measurements such as bounce rate, visit length, number of pages gone by, time went through per page, etc.</p>
+<h3>RFM variables outline these actualities:</h3>
+<ul>
+  <li>the more later the buy, the more responsive the client is to advancements</li>
+  <li>the more regularly the client buys, the more locked in and fulfilled they are</li>
+  <li>money related esteem separates overwhelming spenders from low-value buyers</li>
+</ul>
 
-      <div class="segmentation">
-        <p>Let's dig into few interesting fragments:</p>
-          <ul>
-            <li><b>Champions</b> are your best clients, who bought most as of late, most frequently, and are overwhelming spenders. Compensate these clients. They can gotten to be early adopters for modern items and will offer assistance advance your brand.</li>
-            <li><b>Potential Followers</b> are your later clients with normal recurrence and who went through a great sum. Offer participation or dependability programs or suggest related items to upsell them and offer assistance them gotten to be your Supporters or Champions.</li>
-            <li><b>Modern Clients</b> are your clients who have a tall in general RFM score but are not visit customers. Begin building connections with these clients by giving onboarding back and uncommon offers to extend their visits
-            </li>
-            <li><b>At Chance Clients</b> are your clients who acquired frequently and went through huge sums, but haven’t acquired as of late. Send them personalized reactivation campaigns to reconnect, and offer recharges and accommodating items to energize another buy.</li>
-            <li><b>Can’t Lose Them</b> are clients who utilized to visit and buy very frequently, but haven’t been going to as of late. Bring them back with significant advancements, and run studies to discover out what went off-base and dodge losing them to a competitor.</li>
-          </ul>
-      </div>
+<h1 class="text-center">
+  How to Implement RFM Analysis Used in Customer Segmentation
+</h1>
+<p>RFM investigation makes a difference marketers discover answers to the taking after questions:</p>
+<ul>
+  <li>Who are your best customers?</li>
+  <li>Which of your clients may contribute to your churn rate?</li>
+  <li>Who has the potential to ended up important customers?</li>
+  <li>Which of your clients can be retained?</li>
+  <li>Which of your clients are most likely to reply to engagement campaigns?</li>
+</ul>
+<p>Let’s illustrate how RFM works by considering a test dataset of client transactions:</p>
 
-      <div class="close">
-        <h1><center>Closing Notes</center></h1>
-        <p>RFM could be a data-driven customer division procedure that permits marketers to require strategic choices. It enables marketers to rapidly recognize and portion clients into homogeneous bunches and target them with separated and personalized promoting techniques. This in turn makes strides client engagement and maintenance.</p>
-        <p>In a future web journal post, we’ll see at how to utilize RFM examination to drift the different portions and modify the behavior of undesirable sections.</p>
-      </div>
+<img src="{% static 'images\customer.png' %}" style="width:60%; margin-left: 20%;">
 
-    <!-- Optional JavaScript; choose one of the two! -->
+<div class="analysis">
+  <h1 class="text-center">
+    RFM Analysis Example
+  </h1>
+  <p>To conduct RFM examination for this illustration, let’s see how we will score these clients by positioning
+    them based on each RFM trait independently.</p>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <p>Accept that we rank these clients from 1-5 utilizing RFM values</p>
+  <p>Let’s start with positioning clients on recency to begin with, as appeared within the underneath table:</p>
+  <img src="{% static 'images\rank customer.png' %}" style="width:55%; margin-left:20%;">
+  <p>As seen within the over table, we have sorted customers by recency, with the foremost later buyers at the
+    best. Since clients are relegated scores from 1-5, the beat 20% of clients (client 12, 11, 1) get a recency
+    score of 5, the another 20% (the another 3 clients 15, 2, 7) a score of 4, and so on.</p>
+  <p>So also, we are able at that point sort clients by recurrence from most to slightest visit, allotting the
+    best 20% a recurrence score of 5, etc. For the money related calculate, the beat 20% of clients (enormous
+    spenders) will be doled out a score of 5 and the least 20% a score of 1. These F and M scores are summarized
+    underneath:</p>
+  <img src="{% static 'images\f_score.png' %}" style="width:55%; margin-left:20%;">
+</div>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
+<div class="score">
+  <h1 class="text-center">
+    RFM Score
+  </h1>
+  <p>At long last, we are able rank these clients by combining their person R, F, and M rankings to reach at an
+    amassed RFM score. This RFM score, shown within the table underneath, is essentially the normal of the person
+    R, F, and M scores, gotten by giving break even with weights to each RFM property.</p>
+  <img src="{% static 'images\score.png' %}" style="width:55%; margin-left:20%;">
+</div>
+
+<div class="rfm analysis">
+  <p>The following address that emerges is: Is it reasonable to normal out the person R, F, and M scores for each
+    client and relegate them to RFM section, as per their buy or engagement behavior?</p>
+  <p>Depending on the nature of your businesses, you might increment or diminish the relative significance of each
+    RFM variable to reach at the ultimate score. For case:</p>
+  <ul>
+    <li>In a buyer durables commerce, the money related esteem per exchange is regularly tall but recurrence and
+      recency is flat. For illustration, you can’t anticipate a client to buy a fridge or discuss conditioner on a
+      month to month premise. In this case, a advertiser may provide more weight to financial and recency angles
+      instead of the recurrence viewpoint.</li>
+    <li>In a retail commerce offering fashion/cosmetics, a client who looks and buys items each month will have
+      the next recency and recurrence score than money related score. Accordingly, the RFM score may be calculated
+      by giving more weight to R and F scores than M.</li>
+    <li>For substance apps like Hotstar or Netflix, a fling watcher will have a longer session length than a
+      standard buyer observing at standard interims. For bingers, engagement and recurrence may be given more
+      significance than recency, and for mainstreamers, recency and frequency can be given higher weights than
+      engagement to reach at the RFE score.</li>
+  </ul>
+  <p>This straightforward approach of scaling clients from 1-5 will result in, at the foremost, 125 distinctive
+    RFM scores (5x5x5), extending from 111(lowest) to 555(highest). Each RFM cell will contrast in estimate and
+    change from one another, in terms of the customer’s key propensities, captured within the RFM score. Clearly,
+    marketers can’t analyze all 125 portions separately in the event that each RFM cell is considered a portion,
+    and it’s troublesome and overpowering to imagine this fanciful 3D 3d shape!</p>
+</div>
+<div class="model">
+  <p>We utilize recency and recurrence scores to imagine RFM investigation on a 2-dimensional chart. This empowers
+    clients to devour and make sense of the scores more effectively. Additionally, rather than making 25 segments,
+    we have combined many portions to reach at more sensible and natural fragments.</p>
+
+  <img src="{% static 'images\model.png' %}" style="width:55%; margin-left:20%;">
+  <p>As outlined within the above RFM framework, we will get the taking after data for each of the fragments:</p>
+  <ul>
+    <li>brief portrayal of the fragment</li>
+    <li>recency(last activity)</li>
+    <li>frequency(activity count)</li>
+    <li>average monetary value</li>
+    <li>attainable of clients over distinctive channels</li>
+  </ul>
+</div>
+
+<div class="segmentation">
+  <p>Let's dig into few interesting fragments:</p>
+  <ul>
+    <li><b>Champions</b> are your best clients, who bought most as of late, most frequently, and are overwhelming
+      spenders. Compensate these clients. They can gotten to be early adopters for modern items and will offer
+      assistance advance your brand.</li>
+    <li><b>Potential Followers</b> are your later clients with normal recurrence and who went through a great sum.
+      Offer participation or dependability programs or suggest related items to upsell them and offer assistance
+      them gotten to be your Supporters or Champions.</li>
+    <li><b>Modern Clients</b> are your clients who have a tall in general RFM score but are not visit customers.
+      Begin building connections with these clients by giving onboarding back and uncommon offers to extend their
+      visits
+    </li>
+    <li><b>At Chance Clients</b> are your clients who acquired frequently and went through huge sums, but haven’t
+      acquired as of late. Send them personalized reactivation campaigns to reconnect, and offer recharges and
+      accommodating items to energize another buy.</li>
+    <li><b>Can’t Lose Them</b> are clients who utilized to visit and buy very frequently, but haven’t been going
+      to as of late. Bring them back with significant advancements, and run studies to discover out what went
+      off-base and dodge losing them to a competitor.</li>
+  </ul>
+</div>
+
+<div class="close">
+  <h1 class="text-center">
+    Closing Notes
+  </h1>
+  <p>RFM could be a data-driven customer division procedure that permits marketers to require strategic choices.
+    It enables marketers to rapidly recognize and portion clients into homogeneous bunches and target them with
+    separated and personalized promoting techniques. This in turn makes strides client engagement and maintenance.
+  </p>
+  <p>In a future web journal post, we’ll see at how to utilize RFM examination to drift the different portions and
+    modify the behavior of undesirable sections.</p>
+</div>
+{% endblock content %}
