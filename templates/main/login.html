@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Log in </title>
-</head>
-<body>
-	<div class="container" style="text-align: center;">
-		<h1>Login</h1>
+{% extends 'base.html' %}
 
-		<label for="uname">Username</label><br>
-		<input type="text" placeholder="Enter your username" id="uname" size="50" required><br><br>
+{% block content %}
+<h1>Login</h1>
 
-		<label for="pwd">Password</label><br>
-		<input type="text" placeholder="Enter your password" id="pwd" size="50" required><br><br>
-	</div>
-</body>
-</html>
+<form method="post">
+    {% csrf_token %}
+
+    {{form}}
+
+    <button type="submit" class="btn btn-primary mt-3">Login</button>
+</form>
+{% endblock content %}
