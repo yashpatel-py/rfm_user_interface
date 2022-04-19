@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)c#)sp$k^+z3zk@m&%iqq&fg%18xnv7$_23k#5sd@2k73%4hrh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*',]
+ALLOWED_HOSTS = ['rfmuserinterface.herokuapp.com', '*']
 
 
 # Application definition
