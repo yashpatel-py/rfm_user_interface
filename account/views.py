@@ -45,7 +45,7 @@ class logIn(generic.View):
             else:
                 messages.error(request, "Username or password incorrect")
         form = LoginUserForm()
-        return render(request, "authors/login.html", {"form": form})
+        return render(request, "main/login.html", {"form": form})
 
 class logOut(generic.View):
     def get(self, request):
